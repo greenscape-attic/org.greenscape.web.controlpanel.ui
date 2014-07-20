@@ -1,0 +1,7 @@
+-buildpath: osgi.core,\
+	osgi.cmpn,\
+	junit.osgi,\
+	org.eclipse.osgi.services
+Include-Resource: cp=static
+X-Web-Resource: /cp
+X-Web-Resource-Version: 1.1
