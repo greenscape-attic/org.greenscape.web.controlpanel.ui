@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" ng-app="controlpanelApp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Control Panel - Greenscape Portal</title>
+
+<link rel="stylesheet" href="/common/css/normalize.css" />
+<link rel="stylesheet" href="/common/css/foundation.min.css" />
+<link rel="stylesheet" href="/common/css/application.css" />
+
+<script type="text/javascript" src="/common/lib/angular/angular.min.js"></script>
+<script type="text/javascript" src="js/controller.js"></script>
+</head>
+<body ng-controller="ControlPanelCtrl">
+	<div class="off-canvas-wrap">
+		<div class="inner-wrap">
+			<nav class="tab-bar">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon"><span></span></a>
+				</section>
+
+				<section class="middle tab-bar-section">
+					<h1 class="title">Control Panel</h1>
+				</section>
+
+			</nav>
+
+			<aside class="left-off-canvas-menu">
+				<ul class="off-canvas-list">
+					<li><a href="#">Back to Greenscape</a></li>
+					<li><label>Sites</label></li>
+					<li><a href="#">Public Site</a></li>
+					<li><a href="#">Private Site</a></li>
+				</ul>
+			</aside>
+
+			<section class="main-section">
+				<div class="row">
+					<div class="large-3 columns">
+						<dl class="accordion" data-accordion>
+							<dd>
+								<a href="#panel1">Admin</a>
+								<div id="panel1" class="content active"></div>
+							</dd>
+							<dd>
+								<a href="#panel2">Greenscape</a>
+								<div id="panel2" class="content"></div>
+							</dd>
+							<dd>
+								<a href="#panel3">Portal</a>
+								<div id="panel3" class="content">
+									<nav>
+										<ul class="side-nav">
+											<li ng-repeat="portalNav in portalNavs"><a
+												href="{{portalNav.linkl}}">{{portalNav.name}}</a></li>
+										</ul>
+									</nav>
+								</div>
+							</dd>
+							<dd>
+								<a href="#panel4">Server</a>
+								<div id="panel4" class="content">
+									<ul class="side-nav">
+										<li><a href="#">Server Administration</a></li>
+										<li><a href="#">Portal Instances</a></li>
+										<li><a href="#">Update Manager</a></li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="large-9 columns">
+						<ul class="breadcrumbs">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Features</a></li>
+							<li class="unavailable"><a href="#">Gene Splicing</a></li>
+							<li class="current"><a href="#">Cloning</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<h4>
+							<small>&copy; Greenscape, 2012</small>
+						</h4>
+					</div>
+				</div>
+			</section>
+
+			<a class="exit-off-canvas"></a>
+
+		</div>
+	</div>
+
+	<script type="text/javascript"
+		src="/common/lib/foundation/modernizr.js"></script>
+	<script src="/common/lib/jquery/jquery.js"></script>
+	<script src="/common/lib/foundation/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+</html>
